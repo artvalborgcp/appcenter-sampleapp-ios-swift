@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Enabled App Center SDK verbose logs
         MSAppCenter.setLogLevel(.verbose)
         
-        MSAppCenter.start("<APP SECRET HERE>", withServices: [
+        MSAppCenter.start("644a415e-fcf5-4cd7-bb72-0e7443df585f", withServices: [
             MSAnalytics.self,
             MSCrashes.self,
             MSPush.self,
