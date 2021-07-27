@@ -505,6 +505,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				EXCLUDED_ARCHS = arm64;
+				"EXCLUDED_ARCHS[sdk=*]" = "";
 				INFOPLIST_FILE = "$(SRCROOT)/sampleapp-ios-swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
