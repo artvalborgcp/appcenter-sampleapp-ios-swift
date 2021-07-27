@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,9 +15,7 @@
 		267EDE4A1EFC7C5700AA5444 /* CrashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267EDE491EFC7C5700AA5444 /* CrashViewController.swift */; };
 		267EDE4C1EFC8AF600AA5444 /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267EDE4B1EFC8AF600AA5444 /* AnalyticsViewController.swift */; };
 		AA614A022FD2C7075CB78555 /* Pods_sampleapp_ios_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF7847DECF91A1AD126D8F4 /* Pods_sampleapp_ios_swift.framework */; };
-		BD786D2B26B03D0B00E63519 /* AppCenterDistribute in Frameworks */ = {isa = PBXBuildFile; productRef = BD786D2A26B03D0B00E63519 /* AppCenterDistribute */; };
-		BD786D2D26B03D0B00E63519 /* AppCenterCrashes in Frameworks */ = {isa = PBXBuildFile; productRef = BD786D2C26B03D0B00E63519 /* AppCenterCrashes */; };
-		BD786D2F26B03D0B00E63519 /* AppCenterAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BD786D2E26B03D0B00E63519 /* AppCenterAnalytics */; };
+		BD786D3026B0405100E63519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265586F01EF88770001914FC /* AppDelegate.swift */; };
 		C678D56557DD58162955D862 /* Pods_sampleapp_ios_swiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB089F8C1DC5C5869A4EC277 /* Pods_sampleapp_ios_swiftUITests.framework */; };
 		F02E65BE1F1454DC00F657C9 /* sampleapp_ios_swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02E65BD1F1454DC00F657C9 /* sampleapp_ios_swiftUITests.swift */; };
 /* End PBXBuildFile section */
@@ -59,9 +57,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD786D2F26B03D0B00E63519 /* AppCenterAnalytics in Frameworks */,
-				BD786D2B26B03D0B00E63519 /* AppCenterDistribute in Frameworks */,
-				BD786D2D26B03D0B00E63519 /* AppCenterCrashes in Frameworks */,
 				AA614A022FD2C7075CB78555 /* Pods_sampleapp_ios_swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,9 +156,6 @@
 			);
 			name = "sampleapp-ios-swift";
 			packageProductDependencies = (
-				BD786D2A26B03D0B00E63519 /* AppCenterDistribute */,
-				BD786D2C26B03D0B00E63519 /* AppCenterCrashes */,
-				BD786D2E26B03D0B00E63519 /* AppCenterAnalytics */,
 			);
 			productName = "demoapp-ios-swift";
 			productReference = 265586ED1EF88770001914FC /* sampleapp-ios-swift.app */;
@@ -218,7 +210,7 @@
 				};
 			};
 			buildConfigurationList = 265586E81EF88770001914FC /* Build configuration list for PBXProject "sampleapp-ios-swift" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -227,7 +219,6 @@
 			);
 			mainGroup = 265586E41EF88770001914FC;
 			packageReferences = (
-				BD786D2926B03D0B00E63519 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */,
 			);
 			productRefGroup = 265586EE1EF88770001914FC /* Products */;
 			projectDirPath = "";
@@ -350,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD786D3026B0405100E63519 /* AppDelegate.swift in Sources */,
 				F02E65BE1F1454DC00F657C9 /* sampleapp_ios_swiftUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +414,7 @@
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -521,7 +514,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -542,7 +535,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -616,35 +609,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		BD786D2926B03D0B00E63519 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/microsoft/appcenter-sdk-apple.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.2.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		BD786D2A26B03D0B00E63519 /* AppCenterDistribute */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BD786D2926B03D0B00E63519 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
-			productName = AppCenterDistribute;
-		};
-		BD786D2C26B03D0B00E63519 /* AppCenterCrashes */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BD786D2926B03D0B00E63519 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
-			productName = AppCenterCrashes;
-		};
-		BD786D2E26B03D0B00E63519 /* AppCenterAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BD786D2926B03D0B00E63519 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
-			productName = AppCenterAnalytics;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 265586E51EF88770001914FC /* Project object */;
 }
